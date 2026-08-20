@@ -27,7 +27,7 @@ function tarakSend(json) {
    }
    if (!this.tarakKey.includes(".")) {
       let selectedDataValue = json[this.tarakKey.trim()];
-      this.json(selectedDataValue);
+      this.json([selectedDataValue]);
       return;
    }
    const tarakKey = this.tarakKey.split(".");
