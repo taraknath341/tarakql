@@ -38,7 +38,7 @@ import { tarakParser } from "tarakql";
 If you are using TarakQL locally:
 
 ```js
-import { tarakParser } from "./tarakQL.js";
+import { tarakParser } from "tarakql";
 ```
 
 ---
@@ -47,7 +47,7 @@ import { tarakParser } from "./tarakQL.js";
 
 ```js
 import express from "express";
-import { tarakParser } from "./tarakQL.js";
+import { tarakParser } from "tarakql";
 
 const app = express();
 
@@ -301,7 +301,6 @@ GET /?tarakQL=website
 [
    "https://taraknath341.github.io",
    "https://tarakpro.netlify.app",
-   "https://blueorbitdevs.org",
    "https://taraknotes.netlify.app"
 ]
 ```
@@ -396,7 +395,7 @@ If a `tarakQL` query exists, only the requested data is returned.
 
 ```js
 import express from "express";
-import { tarakParser } from "./tarakQL.js";
+import { tarakParser } from "tarakql";
 
 const app = express();
 
