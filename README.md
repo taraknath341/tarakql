@@ -135,7 +135,6 @@ GET /
    "website": [
       "https://taraknath341.github.io",
       "https://tarakpro.netlify.app",
-      "https://blueorbitdevs.org",
       "https://taraknotes.netlify.app"
    ]
 }
@@ -411,6 +410,7 @@ app.get("/user", (req, res) => {
       age: 17,
       village: "Parulia",
       website: [
+         "https://taraknotes.netlify.app",
          "https://taraknath341.github.io",
          "https://tarakpro.netlify.app",
       ],
