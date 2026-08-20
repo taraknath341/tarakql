@@ -263,10 +263,12 @@ GET /?tarakQL=name
 ### Response
 
 ```json
-{
-   "firstName": "Taraknath",
-   "lastName": "Karan"
-}
+[
+   {
+      "firstName": "Taraknath",
+      "lastName": "Karan"
+   }
+]
 ```
 
 ---
@@ -283,9 +285,11 @@ GET /?tarakQL=website
 
 ```json
 [
-   "https://taraknath341.github.io",
-   "https://tarakpro.netlify.app",
-   "https://taraknotes.netlify.app"
+   [
+      "https://taraknath341.github.io",
+      "https://tarakpro.netlify.app",
+      "https://taraknotes.netlify.app"
+   ]
 ]
 ```
 
