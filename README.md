@@ -64,7 +64,6 @@ app.get("/", (req, res) => {
       website: [
          "https://taraknath341.github.io",
          "https://tarakpro.netlify.app",
-         "https://blueorbitdevs.org",
          "https://taraknotes.netlify.app",
       ],
    });
