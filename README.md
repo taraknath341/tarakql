@@ -35,14 +35,6 @@ Then import it:
 import { tarakParser } from "tarakql";
 ```
 
-If you are using TarakQL locally:
-
-```js
-import { tarakParser } from "tarakql";
-```
-
----
-
 # Quick Start
 
 ```js
@@ -155,7 +147,7 @@ GET /?tarakQL=age
 ### Response
 
 ```json
-17
+[ 17 ]
 ```
 
 Another example:
@@ -167,7 +159,7 @@ GET /?tarakQL=village
 Response:
 
 ```json
-"Parulia"
+[ "Parulia" ]
 ```
 
 ---
@@ -185,10 +177,7 @@ GET /?tarakQL=age,village
 ### Response
 
 ```json
-[
-   17,
-   "Parulia"
-]
+[ 17, "Parulia" ]
 ```
 
 Spaces after commas are also supported:
@@ -223,9 +212,7 @@ GET /?tarakQL=name.firstName
 ### Current Response
 
 ```json
-[
-   "Taraknath"
-]
+[ "Taraknath" ]
 ```
 
 Another example:
@@ -237,9 +224,7 @@ GET /?tarakQL=name.lastName
 Response:
 
 ```json
-[
-   "Karan"
-]
+[ "Karan" ]
 ```
 
 ---
@@ -321,9 +306,7 @@ GET /?tarakQL=website.0
 ### Response
 
 ```json
-[
-   "https://taraknath341.github.io"
-]
+[ "https://taraknath341.github.io" ]
 ```
 
 Get the second website:
@@ -335,9 +318,7 @@ GET /?tarakQL=website.1
 ### Response
 
 ```json
-[
-   "https://tarakpro.netlify.app"
-]
+[ "https://tarakpro.netlify.app" ]
 ```
 
 ---
@@ -491,10 +472,7 @@ GET /user?tarakQL=name,age
 Returns only:
 
 ```json
-[
-   "Tarak",
-   17
-]
+[ "Tarak", 17 ]
 ```
 
 ---
