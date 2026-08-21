@@ -1,13 +1,19 @@
 {
    "name": "tarakql",
-   "version": "1.0.0",
+   "version": "1.0.2",
    "description": "A lightweight and simple query middleware for Express.",
-   "type": "module",
    "main": "./index.js",
+   "types": "./index.d.ts",
    "exports": {
-      ".": "./index.js"
+      ".": {
+         "import": "./index.js",
+         "require": "./index.cjs",
+         "types": "./index.d.ts"
+      }
    },
    "files": [
+      "index.cjs",
+      "index.d.ts",
       "index.js",
       "README.md",
       "LICENSE"
@@ -36,5 +42,8 @@
    "bugs": {
       "url": "https://github.com/taraknath341/tarakql/issues"
    },
-   "homepage": "https://github.com/taraknath341/tarakql#readme"
+   "homepage": "https://github.com/taraknath341/tarakql#readme",
+   "devDependencies": {
+      "@types/express": "^5.0.6"
+   }
 }

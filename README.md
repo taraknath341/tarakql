@@ -53,11 +53,7 @@ app.get("/", (req, res) => {
       },
       age: 17,
       village: "Parulia",
-      website: [
-         "https://taraknath341.github.io",
-         "https://tarakpro.netlify.app",
-         "https://taraknotes.netlify.app",
-      ],
+      website: ["https://taraknath341.github.io", "https://tarakpro.netlify.app", "https://taraknotes.netlify.app"],
    });
 });
 
@@ -124,11 +120,7 @@ GET /
    },
    "age": 17,
    "village": "Parulia",
-   "website": [
-      "https://taraknath341.github.io",
-      "https://tarakpro.netlify.app",
-      "https://taraknotes.netlify.app"
-   ]
+   "website": ["https://taraknath341.github.io", "https://tarakpro.netlify.app", "https://taraknotes.netlify.app"]
 }
 ```
 
@@ -147,7 +139,7 @@ GET /?tarakQL=age
 ### Response
 
 ```json
-[ 17 ]
+[17]
 ```
 
 Another example:
@@ -159,7 +151,7 @@ GET /?tarakQL=village
 Response:
 
 ```json
-[ "Parulia" ]
+["Parulia"]
 ```
 
 ---
@@ -177,7 +169,7 @@ GET /?tarakQL=age,village
 ### Response
 
 ```json
-[ 17, "Parulia" ]
+[17, "Parulia"]
 ```
 
 Spaces after commas are also supported:
@@ -212,7 +204,7 @@ GET /?tarakQL=name.firstName
 ### Current Response
 
 ```json
-[ "Taraknath" ]
+["Taraknath"]
 ```
 
 Another example:
@@ -224,7 +216,7 @@ GET /?tarakQL=name.lastName
 Response:
 
 ```json
-[ "Karan" ]
+["Karan"]
 ```
 
 ---
@@ -242,12 +234,7 @@ GET /?tarakQL=name.firstName,name.lastName,age,village
 ### Response
 
 ```json
-[
-   "Taraknath",
-   "Karan",
-   17,
-   "Parulia"
-]
+["Taraknath", "Karan", 17, "Parulia"]
 ```
 
 ---
@@ -284,13 +271,7 @@ GET /?tarakQL=website
 ### Response
 
 ```json
-[
-   [
-      "https://taraknath341.github.io",
-      "https://tarakpro.netlify.app",
-      "https://taraknotes.netlify.app"
-   ]
-]
+[["https://taraknath341.github.io", "https://tarakpro.netlify.app", "https://taraknotes.netlify.app"]]
 ```
 
 ---
@@ -310,7 +291,7 @@ GET /?tarakQL=website.0
 ### Response
 
 ```json
-[ "https://taraknath341.github.io" ]
+["https://taraknath341.github.io"]
 ```
 
 Get the second website:
@@ -322,20 +303,20 @@ GET /?tarakQL=website.1
 ### Response
 
 ```json
-[ "https://tarakpro.netlify.app" ]
+["https://tarakpro.netlify.app"]
 ```
 
 ---
 
 # Query Syntax
 
-| Query | Description |
-|---|---|
-| `?tarakQL=age` | Select one field |
-| `?tarakQL=name` | Select an object |
-| `?tarakQL=age,village` | Select multiple fields |
-| `?tarakQL=name.firstName` | Select nested data |
-| `?tarakQL=website.0` | Select an array item |
+| Query                         | Description                      |
+| ----------------------------- | -------------------------------- |
+| `?tarakQL=age`                | Select one field                 |
+| `?tarakQL=name`               | Select an object                 |
+| `?tarakQL=age,village`        | Select multiple fields           |
+| `?tarakQL=name.firstName`     | Select nested data               |
+| `?tarakQL=website.0`          | Select an array item             |
 | `?tarakQL=name.firstName,age` | Combine nested and normal fields |
 
 ---
@@ -394,11 +375,7 @@ app.get("/user", (req, res) => {
       },
       age: 17,
       village: "Parulia",
-      website: [
-         "https://taraknotes.netlify.app",
-         "https://taraknath341.github.io",
-         "https://tarakpro.netlify.app",
-      ],
+      website: ["https://taraknotes.netlify.app", "https://taraknath341.github.io", "https://tarakpro.netlify.app"],
    });
 });
 
@@ -476,7 +453,7 @@ GET /user?tarakQL=name,age
 Returns only:
 
 ```json
-[ "Tarak", 17 ]
+["Tarak", 17]
 ```
 
 ---
